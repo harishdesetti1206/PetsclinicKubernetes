@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: petsclinic-app-pod
@@ -6,16 +6,8 @@ metadata:
     app: petclinic
     tier: front-end
 spec:
-  replicas: 1
-  template:
-    metadata:
-      name: petsclinic-app-pod
-      labels:
-        app: petclinic
-    spec:
-      containers:
-        - name: petscliniclatest
-          image: harish1206/petsclinic:latest
-  selector:
-    matchLabels:
-      app: petclinic
+  containers:
+    - name: petscliniclatest
+      image: harish1206/petsclinic:latest
+      ports:
+        - containerPort: 80
