@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: petsclinic-deployment
   labels:
-    app: myapp
+    app: petclinic
     tier: front-end
 spec:
   replicas: 1
@@ -18,4 +18,4 @@ spec:
           image: harish1206/petsclinic:latest
   selector:
     matchLabels:
-      app: myapp
+      app: petclinic
