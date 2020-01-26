@@ -14,7 +14,7 @@ spec:
         app: petclinic
     spec:
       containers:
-        - name: petsclinicLatest
+        - name: petscliniclatest
           image: harish1206/petsclinic:latest
   selector:
     matchLabels:
