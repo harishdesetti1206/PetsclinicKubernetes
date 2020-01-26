@@ -6,6 +6,7 @@ metadata:
   name: petsclinic-service
 
 spec:
+  type: LoadBalancer
   ports:
     - name: http
       protocol: TCP
