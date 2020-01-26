@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petsclinic-deployment
+  labels:
+    app: myapp
+    tier: front-end
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: petclinic-pod
+      labels:
+        app: petclinic
+    spec:
+      containers:
+        - name: petsclinicLatest
+          image: harish1206/petsclinic:latest
+  selector:
+    matchLabels:
+      app: myapp
