@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Pod
 metadata:
-  name: petsclinic-deployment
+  name: petsclinic-app-pod
   labels:
     app: petclinic
     tier: front-end
@@ -9,7 +9,7 @@ spec:
   replicas: 1
   template:
     metadata:
-      name: petclinic-pod
+      name: petsclinic-app-pod
       labels:
         app: petclinic
     spec:
